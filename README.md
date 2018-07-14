@@ -1,5 +1,13 @@
 # PSL Bench
 
+## Setup
+
+```bash
+git clone https://github.com/addr-rs/pslbench
+cd pslbench
+docker build -t pslbench .
+```
+
 ## Sample result
 
 ```bash
