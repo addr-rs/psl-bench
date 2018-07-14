@@ -1,0 +1,14 @@
+[package]
+name = "publicsuffixtest"
+version = "0.1.0"
+authors = ["Jacek Wielemborek <d33tah@gmail.com>"]
+
+[[bin]]
+name = "publicsuffixtest"
+path = "main.rs"
+
+[dependencies.psl]
+version = "0.3"
+
+[profile.release]
+lto = true
