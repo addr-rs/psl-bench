@@ -1,10 +1,10 @@
 [package]
-name = "publicsuffixtest"
+name = "pslbench"
 version = "0.1.0"
 authors = ["Jacek Wielemborek <d33tah@gmail.com>"]
 
 [[bin]]
-name = "publicsuffixtest"
+name = "pslbench"
 path = "main.rs"
 
 [dependencies.psl]
