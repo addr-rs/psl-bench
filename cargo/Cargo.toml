@@ -1,0 +1,13 @@
+[package]
+name = "pslbench"
+version = "0.1.0"
+authors = ["rushmorem <rushmore@webenchanter.com>"]
+publish = false
+
+[dev-dependencies]
+psl = "0.3"
+criterion = "0.2"
+
+[[bench]]
+name = "psl_benchmark"
+harness = false

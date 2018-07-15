@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/addr-rs/pslbench
-cd pslbench
+cd pslbench/docker
 docker build -t pslbench .
 ```
 
