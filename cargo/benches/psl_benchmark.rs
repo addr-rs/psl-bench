@@ -7,25 +7,13 @@ use std::process::Command;
 use psl::{Psl, List};
 use criterion::Criterion;
 
-fn pypy() -> Command {
+fn pypy_cmd() -> Command {
     let mut command = Command::new("pypy");
     command.arg("benches/bench.py");
     command
 }
 
-fn psl(c: &mut Criterion) {
-    let list = List::new();
-
-    c.bench_function("public suffix", move |b| {
-        b.iter(|| { list.suffix("example.gb.com").unwrap(); } )
-    });
-
-    c.bench_function("registrable domain", move |b| {
-        b.iter(|| { list.domain("example.dyndns-server.com").unwrap(); } )
-    });
-}
-
-fn inter_language(c: &mut Criterion) {
+fn bench(c: &mut Criterion) {
     let domains = vec!["example.gb.com"];
 
     let list = List::new();
@@ -34,8 +22,8 @@ fn inter_language(c: &mut Criterion) {
         b.iter(|| { list.suffix(domain).unwrap(); } )
     }, domains.clone());
 
-    c.bench_program_over_inputs("PyPy", pypy, domains);
+    c.bench_program_over_inputs("PyPy", pypy_cmd, domains);
 }
 
-criterion_group!(benches, psl, inter_language);
+criterion_group!(benches, bench);
 criterion_main!(benches);
