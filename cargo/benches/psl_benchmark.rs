@@ -19,7 +19,7 @@ fn bench(c: &mut Criterion) {
     let list = List::new();
 
     c.bench_function_over_inputs("Rust", move |b, &domain| {
-        b.iter(|| { list.suffix(domain).unwrap(); } )
+        b.iter(|| { list.domain(domain).unwrap(); } )
     }, domains.clone());
 
     c.bench_program_over_inputs("PyPy", pypy_cmd, domains);

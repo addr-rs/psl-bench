@@ -11,8 +11,8 @@ fn main() {
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
         let domain_str = line.unwrap();
-        if let Some(suffix) = list.suffix(&domain_str) {
-            handle.write(suffix.as_bytes()).unwrap();
+        if let Some(domain) = list.domain(&domain_str) {
+            handle.write(domain.as_bytes()).unwrap();
             handle.write(b"\n").unwrap();
         }
     }

@@ -10,4 +10,4 @@ echo "Running Rust benchmark"
 /usr/bin/time ./target/release/pslbench public_suffix_list.dat < domains.txt | wc -l
 echo ""
 echo "Running C benchmark"
-/usr/bin/time psl --load-psl-file public_suffix_list.dat --print-unreg-domain < domains.txt | wc -l
+/usr/bin/time psl --load-psl-file public_suffix_list.dat --print-reg-domain < domains.txt | wc -l
