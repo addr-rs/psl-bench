@@ -17,4 +17,5 @@ fn main() {
         };
         handle.write(b"\n").unwrap();
     }
+    handle.flush().unwrap();
 }
