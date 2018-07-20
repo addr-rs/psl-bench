@@ -1,11 +1,11 @@
 extern crate psl;
 
-use std::io::{self, BufRead, Write};
+use std::io::{self, BufRead, BufWriter, Write};
 use psl::{Psl, List};
 
 fn main() {
     let stdout = io::stdout();
-    let mut handle = stdout.lock();
+    let mut handle = BufWriter::new(stdout.lock());
 
     let list = List::new();
     let stdin = io::stdin();
