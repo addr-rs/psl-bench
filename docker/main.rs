@@ -11,9 +11,10 @@ fn main() {
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
         let domain_str = line.unwrap();
-        if let Some(domain) = list.domain(&domain_str) {
-            handle.write(domain.as_bytes()).unwrap();
-            handle.write(b"\n").unwrap();
-        }
+        match list.domain(&domain_str) {
+            Some(domain) => handle.write(domain.as_bytes()).unwrap(),
+            None => handle.write(b"(None)").unwrap(),
+        };
+        handle.write(b"\n").unwrap();
     }
 }
