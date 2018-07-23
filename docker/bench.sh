@@ -4,7 +4,7 @@
 cat domains.txt > /dev/null
 
 echo "Running PyPy benchmark"
-/usr/bin/time pypy main.py public_suffix_list.dat < domains.txt | wc -l
+/usr/bin/time pypy main.py < domains.txt | wc -l
 echo ""
 echo "Running Rust benchmark"
 /usr/bin/time ./target/release/pslbench < domains.txt | wc -l
