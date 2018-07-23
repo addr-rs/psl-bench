@@ -11,20 +11,19 @@ docker build -t pslbench .
 ## Sample result
 
 ```bash
-~/bench]# docker run --rm -it pslbench
 Running PyPy benchmark
-17.83user 0.68system 0:18.67elapsed 99%CPU (0avgtext+0avgdata 142176maxresident)k
-143392inputs+0outputs (238major+25004minor)pagefaults 0swaps
+19.06user 0.82system 0:19.96elapsed 99%CPU (0avgtext+0avgdata 142020maxresident)k
+143392inputs+0outputs (238major+24982minor)pagefaults 0swaps
 10000000
 
 Running Rust benchmark
-1.76user 0.21system 0:01.98elapsed 99%CPU (0avgtext+0avgdata 3264maxresident)k
-3112inputs+0outputs (12major+144minor)pagefaults 0swaps
+2.27user 0.26system 0:02.56elapsed 99%CPU (0avgtext+0avgdata 2868maxresident)k
+2608inputs+0outputs (8major+143minor)pagefaults 0swaps
 10000000
 
 Running C benchmark
-14.43user 0.62system 0:15.11elapsed 99%CPU (0avgtext+0avgdata 2664maxresident)k
-1752inputs+0outputs (8major+268minor)pagefaults 0swaps
+17.02user 0.70system 0:18.27elapsed 96%CPU (0avgtext+0avgdata 2864maxresident)k
+1752inputs+0outputs (8major+266minor)pagefaults 0swaps
 9999999
 ```
 
