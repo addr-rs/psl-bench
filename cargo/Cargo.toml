@@ -5,7 +5,9 @@ authors = ["rushmorem <rushmore@webenchanter.com>"]
 publish = false
 
 [dev-dependencies]
-psl = "0.3"
+psl = "0.4"
+publicsuffix = "1.5"
+addr = "0.1"
 criterion = "0.2"
 
 [[bench]]
