@@ -3,12 +3,13 @@ name = "pslbench"
 version = "0.1.0"
 authors = ["rushmorem <rushmore@webenchanter.com>"]
 publish = false
+edition = "2018"
 
 [dev-dependencies]
-psl = "0.4"
-publicsuffix = "1.5"
-addr = "0.1"
-criterion = "0.2"
+psl = "1.0.3"
+publicsuffix = "1.5.6"
+addr = "0.6.0"
+criterion = "0.3.4"
 
 [[bench]]
 name = "psl_benchmark"

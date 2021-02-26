@@ -2,13 +2,15 @@
 name = "pslbench"
 version = "0.1.0"
 authors = ["Jacek Wielemborek <d33tah@gmail.com>"]
+publish = false
+edition = "2018"
 
 [[bin]]
 name = "pslbench"
 path = "main.rs"
 
-[dependencies.psl]
-version = "0.4.0"
+[dependencies]
+psl = "1.0.3"
 
 [profile.release]
 lto = true

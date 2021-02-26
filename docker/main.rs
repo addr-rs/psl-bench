@@ -1,19 +1,18 @@
-extern crate psl;
-
 use std::io::{self, BufRead, BufWriter, Write};
-use psl::{Psl, List};
 
 fn main() {
     let stdout = io::stdout();
     let mut handle = BufWriter::new(stdout.lock());
 
-    let list = List::new();
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
-        let domain_str = line.unwrap();
-        match list.domain(&domain_str) {
+        let input_str = line.unwrap();
+        let input = input_str.as_bytes();
+        handle.write(input).unwrap();
+        handle.write(b": ").unwrap();
+        match psl::domain(input) {
             Some(domain) => handle.write(domain.as_bytes()).unwrap(),
-            None => handle.write(b"(None)").unwrap(),
+            None => handle.write(b"(null)").unwrap(),
         };
         handle.write(b"\n").unwrap();
     }
