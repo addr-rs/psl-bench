@@ -13,14 +13,19 @@ docker build -t pslbench .
 ```bash
 $ docker run --rm pslbench
 
-Running Rust benchmark
-1.37user 0.54system 0:01.94elapsed 98%CPU (0avgtext+0avgdata 2532maxresident)k
-2584inputs+0outputs (8major+135minor)pagefaults 0swaps
+Running Rust (psl) benchmark
+2.34user 0.69system 0:03.36elapsed 89%CPU (0avgtext+0avgdata 2504maxresident)k
+2392inputs+0outputs (9major+133minor)pagefaults 0swaps
+10000000
+
+Running Rust (publicsuffix) benchmark
+3.92user 1.37system 0:06.63elapsed 79%CPU (0avgtext+0avgdata 4324maxresident)k
+2272inputs+0outputs (3major+683minor)pagefaults 0swaps
 10000000
 
 Running C benchmark
-9.83user 0.81system 0:10.67elapsed 99%CPU (0avgtext+0avgdata 2960maxresident)k
-2632inputs+0outputs (9major+333minor)pagefaults 0swaps
+18.34user 1.05system 0:19.99elapsed 97%CPU (0avgtext+0avgdata 2972maxresident)k
+2176inputs+0outputs (9major+332minor)pagefaults 0swaps
 10000000
 ```
 
