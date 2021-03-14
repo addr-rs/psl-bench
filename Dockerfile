@@ -12,7 +12,8 @@ RUN curl --location https://opendata.rapid7.com`cat url.txt` \
 ARG CACHE_DATE=not_a_date
 
 ADD ./Cargo.toml .
-ADD ./main.rs .
+ADD ./psl.rs .
+ADD ./publicsuffix.rs .
 ENV RUSTFLAGS "-Ctarget-cpu=native"
 RUN time cargo build --release --quiet
 

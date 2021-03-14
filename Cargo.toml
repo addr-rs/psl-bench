@@ -6,11 +6,16 @@ publish = false
 edition = "2018"
 
 [[bin]]
-name = "pslbench"
-path = "main.rs"
+name = "psl"
+path = "psl.rs"
+
+[[bin]]
+name = "publicsuffix"
+path = "publicsuffix.rs"
 
 [dependencies]
-psl = "1.0.3"
+psl = "2"
+publicsuffix = "2"
 
 [profile.release]
 lto = true

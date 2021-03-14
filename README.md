@@ -3,8 +3,8 @@
 ## Setup
 
 ```bash
-git clone https://github.com/addr-rs/pslbench
-cd pslbench/docker
+git clone https://github.com/addr-rs/psl-bench
+cd psl-bench/
 docker build -t pslbench .
 ```
 

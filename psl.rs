@@ -1,3 +1,4 @@
+use psl::{Psl, List};
 use std::io::{self, BufRead, BufWriter, Write};
 
 fn main() {
@@ -10,7 +11,7 @@ fn main() {
         let input = input_str.as_bytes();
         handle.write(input).unwrap();
         handle.write(b": ").unwrap();
-        match psl::domain(input) {
+        match List.domain(input) {
             Some(domain) => handle.write(domain.as_bytes()).unwrap(),
             None => handle.write(b"(null)").unwrap(),
         };
