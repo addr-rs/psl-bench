@@ -13,6 +13,7 @@ ARG CACHE_DATE=not_a_date
 
 ADD ./Cargo.toml .
 ADD ./psl.rs .
+ADD ./nom_psl.rs .
 ADD ./publicsuffix.rs .
 ENV RUSTFLAGS "-Ctarget-cpu=native"
 RUN time cargo build --release --quiet

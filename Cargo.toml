@@ -10,12 +10,17 @@ name = "psl"
 path = "psl.rs"
 
 [[bin]]
+name = "nom-psl"
+path = "nom_psl.rs"
+
+[[bin]]
 name = "publicsuffix"
 path = "publicsuffix.rs"
 
 [dependencies]
 psl = "2"
 publicsuffix = "2"
+nom-psl = "1"
 
 [profile.release]
 lto = true
