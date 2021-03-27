@@ -1,26 +1,10 @@
 [package]
 name = "pslbench"
 version = "0.1.0"
-authors = ["Jacek Wielemborek <d33tah@gmail.com>"]
+authors = ["Rushmore Mushambi <rushmore@webenchanter.com>"]
 publish = false
-edition = "2018"
-
-[[bin]]
-name = "psl"
-path = "psl.rs"
-
-[[bin]]
-name = "nom-psl"
-path = "nom_psl.rs"
-
-[[bin]]
-name = "publicsuffix"
-path = "publicsuffix.rs"
+edition = "2021"
 
 [dependencies]
 psl = "2"
-publicsuffix = "2"
-nom-psl = "1"
-
-[profile.release]
-lto = true
+publicsuffix = { version = "2", default-features = false, features = ["hashbrown"] }
