@@ -1,5 +1,5 @@
 [package]
-name = "pslbench"
+name = "psl-bench"
 version = "0.1.0"
 authors = ["Rushmore Mushambi <rushmore@webenchanter.com>"]
 publish = false
